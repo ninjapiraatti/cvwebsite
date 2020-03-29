@@ -1,0 +1,48 @@
+/* VARIABLES */
+
+
+/* Typography */
+
+$font-sans: 'Overpass Mono', sans-serif;
+$font-serif: serif;
+$font-heading: $font-sans;
+
+$base-font-size: 100%; // Must be a percent
+$line-height: 1.5; // Must be unitless
+
+
+
+/* Colors */
+
+$color-bg: #480083;
+$color-fg: #FFD863;
+$color-bg-dim: rgba(#000, 0.05);
+$color-fg-dim: fade-out($color-fg, 0.5);
+
+$color-brand: #480083;
+$color-brand-2: #FFB710;
+$color-brand-3: #ff44ff;
+
+$color-link: #F67B00;
+$color-link-hover: lighten($color-link, 15%);
+$color-link-active: darken($color-link, 5%);
+
+$color-separator: rgba(#000, 0.05);
+$color-border: rgba(#000, 0.2);
+$color-button: darken($color-brand-2, 5%);
+$color-focus: $color-brand-2;
+$color-info: #429bf6;
+$color-error: #f75019;
+
+
+
+/* Layout */
+
+$spacing: $line-height * 1rem;
+
+$wrapper-width: 62.5rem;
+$wrapper-padding: 2.4vw;
+
+$navbar-height: $spacing * 2;
+$navbar-hamburger: 16px;
+

@@ -1,0 +1,25 @@
+/* Logo */
+
+.site-logo {
+	display: inline-flex;
+	align-items: center;
+	height: $navbar-height;
+	max-width: calc(100% - #{$wrapper-padding} - #{$navbar-hamburger});
+
+	color: $color-fg;
+
+	&__img {
+		width: $spacing * 2.5;
+		height: $spacing * 1.5;
+		fill: currentColor;
+	}
+
+	&__text {
+		font-size: 1.5em;
+	}
+
+	&__img + &__text {
+		margin-left: 0.5em;
+	}
+}
+
