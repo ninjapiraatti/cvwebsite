@@ -1,20 +1,36 @@
 extends layout
-
+block header
+  a(href="/" class="site-logo")
+    svg(class="site-logo__img")
+      use(xlink:href="images/icons.svg#logo")
+  a(href="#main-nav" data-nav="#main-nav" class="nav-button no-jump active")
+    svg(class="icon")
+      use(xlink:href="/site/templates/img/icons.svg#menu")
+  nav
+    ul(id="main-nav" class="nav nav--main expander--open nav--desktop")
+      li
+        a(class="nav-link" href="#intro") Intro
+      li
+        a(class="nav-link" href="#code") Code
 block intro
-  h1= title
-  p Welcome to #{title}
+  .intro.grid.grid--gutter
+    .intro__image
+      h1.h1= title
+      p Welcome to #{title}
+    .intro__summary
+      p Lorem ipsum
 block code
-  h2 Code
+  h2.h2 Code
   p I know kung fu
 block design
-  h2 Design
+  h2.h2 Design
   p I design stuffs.
 block marketing
-  h2 Marketing
+  h2.h2 Marketing
   p I know my tribe.
 block experimental
-  h2 Experimental
+  h2.h2 Experimental
   p WebGL and stuff
 block workstudies
-  h2 Work & Studies
+  h2.h2 Work & Studies
   p I've worked.

@@ -6,7 +6,7 @@ html {
 
 body {
 	font-family: $font-sans;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: $line-height;
 }
 
@@ -60,6 +60,7 @@ sub {
 	margin: $spacing 0;
 	&:first-child { margin-top: 0; }
 	&:last-child { margin-bottom: 0; }
+	font-family: $font-heading;
 }
 
 .h1 {

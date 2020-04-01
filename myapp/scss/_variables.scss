@@ -3,9 +3,12 @@
 
 /* Typography */
 
-$font-sans: 'Overpass Mono', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700|Roboto+Mono:300,300i,700,700i|Roboto:100,100i,300,300i,700,700i&display=swap');
+
+$font-sans: 'Roboto', sans-serif;
 $font-serif: serif;
-$font-heading: $font-sans;
+$font-heading: 'Oswald', sans-serif;
+$font-mono: 'Roboto Mono';
 
 $base-font-size: 100%; // Must be a percent
 $line-height: 1.5; // Must be unitless
@@ -14,16 +17,16 @@ $line-height: 1.5; // Must be unitless
 
 /* Colors */
 
-$color-bg: #480083;
-$color-fg: #FFD863;
+$color-bg: #eee;
+$color-fg: #222;
 $color-bg-dim: rgba(#000, 0.05);
 $color-fg-dim: fade-out($color-fg, 0.5);
 
-$color-brand: #480083;
-$color-brand-2: #FFB710;
-$color-brand-3: #ff44ff;
+$color-brand: #9f0000;
+$color-brand-2: rgb(197, 240, 255);
+$color-brand-3: #445aff;
 
-$color-link: #F67B00;
+$color-link: rgb(246, 0, 86);
 $color-link-hover: lighten($color-link, 15%);
 $color-link-active: darken($color-link, 5%);
 

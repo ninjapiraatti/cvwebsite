@@ -80,16 +80,12 @@ body {
 	}
 }
 
-// Sponsors
-
-.sponsors {
-	.sponsor {
-		display: inline-block;
-		padding-left: 10px;
-		padding-right: 10px;
-		img {
-			height: 40px;
-		}
+.intro {
+	&__image {
+		width: 50%;
+	}
+	&__summary {
+		width: 50%;
 	}
 }
 

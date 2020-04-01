@@ -4,15 +4,17 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/styles.css')
   body
-    section#intro
+    header.site-header.site-header--desktop
+      block header
+    section#intro.section
       block intro
-    section#code
+    section#code.section
       block code
-    section#design
+    section#design.section
       block design
-    section#marketing
+    section#marketing.section
       block marketing
-    section#experimental
+    section#experimental.section
       block experimental
-    section#workstudies
+    section#workstudies.section
       block workstudies
