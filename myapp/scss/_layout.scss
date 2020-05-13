@@ -79,13 +79,54 @@ body {
 		}
 	}
 }
+#intro {
+	height: 100vh;
+}
 
 .intro {
 	&__image {
-		width: 50%;
+		width: 40%;
+		text-align: center;
+		img {
+			border-radius: 50%;
+			border: 0.1px solid #555;
+			padding: 2px;
+		}
+		h1 {
+			margin-bottom: 5px;
+		}
 	}
 	&__summary {
-		width: 50%;
+		width: 60%;
+		padding-left: calc(50vw - #{$wrapper-width / 2});
+		p {
+			font-size: 0.8rem;
+		}
+		.h2 {
+			margin-top: 12px;
+			margin-bottom: 16px;
+		}
+		.h3 {
+			font-size: 1rem;
+			margin-bottom: 4px;
+		}
+		.skill {
+			margin-bottom: 12px;
+			border-bottom: 1px dotted #ddd;
+		}
+	}
+	.bottomleft,
+	.bottomright {
+		position: absolute;
+		bottom: 0px;
+		font-size: 0.7rem;
+		color: #bbb;
+	}
+	.bottomleft {
+		left: 10px;
+	}
+	.bottomright {
+		right: 10px;
 	}
 }
 

@@ -3,18 +3,21 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/styles.css')
+    script(src='https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js' async)
+    script(type='module' src='../javascripts/main.js')
   body
     header.site-header.site-header--desktop
       block header
-    section#intro.section
-      block intro
-    section#code.section
-      block code
-    section#design.section
-      block design
-    section#marketing.section
-      block marketing
-    section#experimental.section
-      block experimental
-    section#workstudies.section
-      block workstudies
+    main.site-content
+      section#intro.section
+        block intro
+      section#code.section
+        block code
+      section#design.section
+        block design
+      section#marketing.section
+        block marketing
+      section#experimental.section
+        block experimental
+      section#workstudies.section
+        block workstudies
