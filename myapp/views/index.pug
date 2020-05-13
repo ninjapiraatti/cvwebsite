@@ -1,17 +1,18 @@
 extends layout
 block header
   a(href="/" class="site-logo")
-    svg(class="site-logo__img")
-      use(xlink:href="images/icons.svg#logo")
+    object(type="image/svg+xml" data="../images/logo_animated.svg")
   a(href="#main-nav" data-nav="#main-nav" class="nav-button no-jump active")
     svg(class="icon")
-      use(xlink:href="/site/templates/img/icons.svg#menu")
+      use(xlink:href="images/icons.svg#menu")
   nav
     ul(id="main-nav" class="nav nav--main expander--open nav--desktop")
       li
         a(class="nav-link" href="#intro") Intro
       li
         a(class="nav-link" href="#code") Code
+      li
+        a(class="nav-link" href="#design") Design
 block intro
   .intro.grid.grid--gutter
     .intro__image
@@ -46,8 +47,36 @@ block intro
     .bottomright
       p Lorem
 block code
-  h2.h2 Code
-  p I know kung fu
+  .code.grid.grid--gutter
+    .code__body
+      h2.h2 Code
+      p I know kung fu
+    .code__snippet
+      pre.
+        while (y < map->mapH - 1)
+        {
+            x = map->mapW - 1;
+            while (x > 0)
+            {
+                while(map->map[y][x] == '.')
+                    x--;
+                if (map->map[y][x] == map->psymbol)
+                {
+                    if ((map->mapW - x) > count)
+                    {
+                        map->rttargetX = map->mapW - 1;
+                        map->rttargetY = y;
+                        count = map->mapW - x;
+                        break ;
+                    }
+                }
+                else
+                    break;
+                x--;
+            }
+            y++;
+        }
+        
 block design
   h2.h2 Design
   p I design stuffs.

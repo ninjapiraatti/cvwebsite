@@ -8,9 +8,8 @@
 
 	color: $color-fg;
 
-	&__img {
-		width: $spacing * 2.5;
-		height: $spacing * 1.5;
+	&__img, object {
+		height: $spacing * 0.9;
 		fill: currentColor;
 	}
 
