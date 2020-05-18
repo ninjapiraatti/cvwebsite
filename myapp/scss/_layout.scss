@@ -132,8 +132,9 @@ body {
 
 #design {
 	height: 100vh;
-	background-image: url('../images/hbp.jpg');
-	background-size: cover;
-	background-position: center;
+	background-image: radial-gradient(#ddd 10%, transparent 10%);
+	//background-color: #e53935;
+	//background-position: 0 0, 2px 2px;
+	background-size: 15px 15px;
 }
 

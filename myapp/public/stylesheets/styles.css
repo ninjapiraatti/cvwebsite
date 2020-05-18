@@ -329,9 +329,8 @@ body {
 
 #design {
   height: 100vh;
-  background-image: url("../images/hbp.jpg");
-  background-size: cover;
-  background-position: center; }
+  background-image: radial-gradient(#ddd 10%, transparent 10%);
+  background-size: 15px 15px; }
 
 /* GRID */
 .grid {
