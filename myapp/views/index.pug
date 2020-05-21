@@ -30,10 +30,10 @@ block intro
       ul
         li.skill
           h3.h3 C & GoLang
-          p I'm currently studying in Hive Helsinki and learning fast.
+          p I'm currently studying at Hive Helsinki and learning fast.
         li.skill
           h3.h3 Graphic Design
-          p With 15 years of hands on experience I know how to visualize a message.
+          p With 15 years of hands-on experience I know how to visualize a message.
         li.skill
           h3.h3 Web development
           p SASS, ProcessWire and PHP have been my main tools so far and I've published over 100 websites. Right now I'm interested in modern web tech – this website is my first dabble into Node.js.
@@ -83,11 +83,36 @@ block code
         }
         
 block design
-  h2.h2 Design
-  p My approach to design is to convey a message the best I can in a usable and attractive package. Graphic design – while a creative discipline – is not art, it's about reaching your tribe. 
+  .design.grid.grid--gutter
+    .design__copy
+      h2.h2 Design
+      p My approach to design is to convey a message in a usable and attractive package. Graphic design – while a creative discipline – is not art, it's about reaching your tribe. 
+    .design__gallery
+      ul.gallery
+        li.gallery__item
+          a(href="../images/tuomaslouekari.jpg" data-lightbox="#lightbox" data-lightbox-slide="0")
+            img(class="gallery__image" src="../images/tuomaslouekari.jpg")
+      #lightbox.lightbox
+        ul.lightbox__content
+          li.lightbox__image
+            img(src="../images/tuomaslouekari.jpg" alt="Tuomas Louekari")
+        button(class="lightbox__prev" data-lightbox="#lightbox" data-lightbox-slide="prev")
+          svg(class="icon")
+            use(xlink:href="images/icons.svg#prev")
+        button(class="lightbox__next" data-lightbox="#lightbox" data-lightbox-slide="next")
+          svg(class="icon")
+            use(xlink:href="images/icons.svg#next")
+        button(class="lightbox__close" data-lightbox="#lightbox")
+          svg(class="icon")
+            use(xlink:href="images/icons.svg#close")
+
 block marketing
   h2.h2 Marketing & Business
-  p I follow the path of authenticity. For me a truly successful company is one that speaks from the heart internally and to their customers. 
+  p I follow the path of authenticity. For me, a truly successful company is one that speaks from the heart internally and to their customers.
+  h2.h2 Case study: Wefixit
+  p Wefixit is a fresh device repair shop heavy on circular economy and sustainable electronics. I started working on their strategy, visual identity, website and digital marketing.
+  p I came up with a tagline "Ystävällinen laitehuoltosi" which translates roughly to "Your friendly neighborhood device repair shop". It made sense for a small business to first grow locally. Strategy worked too – Wefixit has great reviews from their customers and business is good.
+  p Ads run on Google and Facebook with every euro spent bringing in five. 
 block experimental
   h2.h2 Experimental
   p Here are some more experimental projects I've done over the years.

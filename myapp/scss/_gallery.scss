@@ -1,0 +1,21 @@
+/* GALLERY */
+
+$gallery-gutter: $spacing !default;
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: -$gallery-gutter / 2;
+	list-style: none;
+
+	&__item {
+		width: calc(100% / 3);
+		padding: $gallery-gutter / 2;
+	}
+
+	&__image {
+		display: block;
+	}
+}
+
