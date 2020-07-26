@@ -8,7 +8,7 @@
 	left: 0;
 	z-index: 9;
 
-	background: rgba($color-bg, 0.5);
+	background: rgba(255,255,255, 0.9);
 	transition: opacity 0.25s cubic-bezier(0.5, 0, 0.5, 1);
 
 	&[aria-hidden=true] {
@@ -21,6 +21,16 @@
 
 	&--closed &__content {
 		transform: scale(0.96);
+	}
+
+	&__close {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+	}
+
+	svg {
+		pointer-events: none;
 	}
 
 	&__prev,

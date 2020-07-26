@@ -10,7 +10,7 @@ $gallery-gutter: $spacing !default;
 	list-style: none;
 
 	&__item {
-		width: calc(100% / 3);
+		width: calc(100% / 2);
 		padding: $gallery-gutter / 2;
 	}
 

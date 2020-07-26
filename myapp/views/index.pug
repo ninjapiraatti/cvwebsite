@@ -1,10 +1,12 @@
 extends layout
 block header
   a(href="/" class="site-logo")
-    object(type="image/svg+xml" data="../images/logo_animated.svg")
+    object(type="image/svg+xml" data="../images/logo_animated2.svg")
   a(href="#main-nav" data-nav="#main-nav" class="nav-button no-jump active")
     svg(class="icon")
-      use(xlink:href="images/icons.svg#menu")
+      use(xlink:href="../../images/icons.svg#menu")
+  a(href="/" class="site-logo")
+    object(type="image/svg+xml" data="../images/icons.svg")
   nav
     ul(id="main-nav" class="nav nav--main expander--open nav--desktop")
       li
@@ -53,7 +55,7 @@ block intro
       p Lorem
 block code
   .code.grid.grid--gutter
-    .code__body
+    .code__body.wysiwyg
       h2.h2 Code
       p I know kung fu
     .code__snippet
@@ -84,35 +86,45 @@ block code
         
 block design
   .design.grid.grid--gutter
-    .design__copy
+    .design__copy.wysiwyg
       h2.h2 Design
       p My approach to design is to convey a message in a usable and attractive package. Graphic design – while a creative discipline – is not art, it's about reaching your tribe. 
     .design__gallery
       ul.gallery
         li.gallery__item
-          a(href="../images/tuomaslouekari.jpg" data-lightbox="#lightbox" data-lightbox-slide="0")
-            img(class="gallery__image" src="../images/tuomaslouekari.jpg")
+          a(href="../images/post_valentines.jpg" data-lightbox="#lightbox" data-lightbox-slide="0")
+            img(class="gallery__image" src="../images/post_valentines.jpg")
+        li.gallery__item
+          a(href="../images/11_ky.jpg" data-lightbox="#lightbox" data-lightbox-slide="1")
+            img(class="gallery__image" src="../images/11_ky.jpg")
       #lightbox.lightbox
         ul.lightbox__content
           li.lightbox__image
-            img(src="../images/tuomaslouekari.jpg" alt="Tuomas Louekari")
+            img(src="../images/post_valentines.jpg" alt="Tuomas Louekari")
+          li.lightbox__image
+            img(src="../images/11_ky.jpg" alt="Tuomas Louekari")
         button(class="lightbox__prev" data-lightbox="#lightbox" data-lightbox-slide="prev")
           svg(class="icon")
-            use(xlink:href="images/icons.svg#prev")
+            use(xlink:href="../images/icons.svg#prev")
         button(class="lightbox__next" data-lightbox="#lightbox" data-lightbox-slide="next")
           svg(class="icon")
-            use(xlink:href="images/icons.svg#next")
+            use(xlink:href="../images/icons.svg#next")
         button(class="lightbox__close" data-lightbox="#lightbox")
           svg(class="icon")
-            use(xlink:href="images/icons.svg#close")
+            use(xlink:href="../images/icons.svg#close")
 
 block marketing
-  h2.h2 Marketing & Business
-  p I follow the path of authenticity. For me, a truly successful company is one that speaks from the heart internally and to their customers.
-  h2.h2 Case study: Wefixit
-  p Wefixit is a fresh device repair shop heavy on circular economy and sustainable electronics. I started working on their strategy, visual identity, website and digital marketing.
-  p I came up with a tagline "Ystävällinen laitehuoltosi" which translates roughly to "Your friendly neighborhood device repair shop". It made sense for a small business to first grow locally. Strategy worked too – Wefixit has great reviews from their customers and business is good.
-  p Ads run on Google and Facebook with every euro spent bringing in five. 
+  .marketing.grid.grid--gutter
+    .marketing__copy.wysiwyg
+      h2.h2 Marketing & Business
+      p I follow the path of authenticity. For me, a truly successful company is one that speaks from the heart internally and to their customers.
+      h3.h3 Case study: Wefixit
+      p Wefixit is a fresh device repair shop heavy on circular economy and sustainable electronics. I started working on their strategy, visual identity, website and digital marketing.
+      p I came up with a tagline "Ystävällinen laitehuoltosi" which translates roughly to "Your friendly neighborhood device repair shop". It made sense for a small business to first grow locally. Strategy worked too – Wefixit has great reviews from their customers and business is good.
+      p Ads run on Google and Facebook with every euro spent bringing in five.
+    .marketing__image
+      img(src="../images/11_ky.jpg" alt="Tuomas Louekari")
+
 block experimental
   h2.h2 Experimental
   p Here are some more experimental projects I've done over the years.

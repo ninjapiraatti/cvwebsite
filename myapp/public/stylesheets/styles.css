@@ -327,10 +327,25 @@ body {
 .intro .bottomright {
   right: 10px; }
 
+.code__copy {
+  width: 40%; }
+
 #design {
   height: 100vh;
   background-image: radial-gradient(#ddd 10%, transparent 10%);
   background-size: 15px 15px; }
+
+.design__copy {
+  width: 40%; }
+
+.design__gallery {
+  width: 60%; }
+
+.marketing__copy {
+  width: 40%; }
+
+.marketing__image {
+  width: 60%; }
 
 /* GRID */
 .grid {
@@ -589,6 +604,65 @@ Component specific section modifications should be in the component's .scss file
   transition: height 0.25s cubic-bezier(0.5, 0, 0.5, 1); }
   .expander--closed {
     display: none; }
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.25s cubic-bezier(0.5, 0, 0.5, 1); }
+  .lightbox[aria-hidden=true] {
+    display: none; }
+  .lightbox--closed {
+    opacity: 0; }
+  .lightbox--closed .lightbox__content {
+    transform: scale(0.96); }
+  .lightbox__close {
+    position: absolute;
+    top: 50px;
+    right: 50px; }
+  .lightbox svg {
+    pointer-events: none; }
+  .lightbox__prev, .lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  .lightbox__prev {
+    left: 1.5rem; }
+  .lightbox__next {
+    right: 1.5rem; }
+  .lightbox__content {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    position: relative;
+    transform: translateZ(0);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.4, 1.5); }
+    .lightbox__content::-webkit-scrollbar {
+      display: none; }
+  .lightbox__image {
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .lightbox__image > img {
+      display: block;
+      max-width: calc(100vw - 3rem);
+      max-height: calc(100vh - 3rem);
+      box-shadow: 0 1.5rem 4.5rem rgba(0, 0, 0, 0.2); }
+
+html:not(.no-js) .lightbox:not(.lightbox--open):not(.lightbox--closed) {
+  display: none; }
 
 /* LIUKURI */
 .liukuri {
@@ -902,7 +976,7 @@ input[type="checkbox"] {
   margin: -0.75rem;
   list-style: none; }
   .gallery__item {
-    width: calc(100% / 3);
+    width: calc(100% / 2);
     padding: 0.75rem; }
   .gallery__image {
     display: block; }
