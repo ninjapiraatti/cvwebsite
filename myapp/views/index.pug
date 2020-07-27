@@ -18,8 +18,6 @@ block header
       li
         a(class="nav-link" href="#marketing") Business
       li
-        a(class="nav-link" href="#experimental") Experimental
-      li
         a(class="nav-link" href="#workstudies") Timeline
 block intro
   .intro.grid.grid--gutter
@@ -55,40 +53,43 @@ block intro
       p Lorem
 block code
   .code.grid.grid--gutter
-    .code__body.wysiwyg
-      h2.h2 Code
-      p I know kung fu
+    .code__copy.wysiwyg
+      h2.h2 You know nothing Jon Snow
+      p Before Hive I had mostly done frontend markup, CSS/SASS, simple PHP and some experiments in C# and JS. Very soon I understood how little I really knew about actual programming.
+      p In one year of studying I've learned more than I thought was even possible. To build a strong foundation, we started from the very basics of computer science and C. In a matter of months, we were implementing algorithms and building libraries.
+      p Right now I'm in the part of the learning curve where it's apparent that there's a LOT to do and prioritise. What could be more fun?
     .code__snippet
       pre.
-        while (y < map->mapH - 1)
+        char		    *helper_itoa_base(intmax_t value, int base, t_printf *data)
         {
-            x = map->mapW - 1;
-            while (x > 0)
-            {
-                while(map->map[y][x] == '.')
-                    x--;
-                if (map->map[y][x] == map->psymbol)
-                {
-                    if ((map->mapW - x) > count)
-                    {
-                        map->rttargetX = map->mapW - 1;
-                        map->rttargetY = y;
-                        count = map->mapW - x;
-                        break ;
-                    }
-                }
-                else
-                    break;
-                x--;
-            }
-            y++;
-        }
-        
+          char      *s;
+          intmax_t	n;
+          int       i;
+          int       caps;
+
+          caps = 10;
+          if (data->bx == 1)
+            caps = 42;
+          n = (value < 0) ? -value : value;
+          i = 1;
+          while ((n /= base) >= 1)
+            i++;
+          s = (char*)malloc(sizeof(char) * (i + 1));
+          s[i] = '\0';
+          n = (value < 0) ? -value : value;
+          while (i--)
+          {
+            s[i] = (n % base < 10) ? n % base + '0' : n % base + 'a' - caps;
+            n /= base;
+          }
+          return (s);
+        }       
 block design
   .design.grid.grid--gutter
     .design__copy.wysiwyg
       h2.h2 Design
-      p My approach to design is to convey a message in a usable and attractive package. Graphic design – while a creative discipline – is not art, it's about reaching your tribe. 
+      p My approach to design is to convey a message in a usable and attractive package. Graphic design, while a creative discipline, is not art. It's about reaching your tribe.
+      p I argue that design thinking applies to almost everything we create. My process is a delightful mixture of experience, teamwork and use of right tools — all 
     .design__gallery
       ul.gallery
         li.gallery__item
@@ -117,17 +118,15 @@ block marketing
   .marketing.grid.grid--gutter
     .marketing__copy.wysiwyg
       h2.h2 Marketing & Business
-      p I follow the path of authenticity. For me, a truly successful company is one that speaks from the heart internally and to their customers.
+      p I believe that marketing has to start from authenticity. For me, a truly successful company is one that speaks from the heart internally and to their customers.
       h3.h3 Case study: Wefixit
       p Wefixit is a fresh device repair shop heavy on circular economy and sustainable electronics. I started working on their strategy, visual identity, website and digital marketing.
       p I came up with a tagline "Ystävällinen laitehuoltosi" which translates roughly to "Your friendly neighborhood device repair shop". It made sense for a small business to first grow locally. Strategy worked too – Wefixit has great reviews from their customers and business is good.
-      p Ads run on Google and Facebook with every euro spent bringing in five.
+      p Wefixit ads on Google and Facebook brought in five euro per one euro spent.
+      p For more references see my company's <a href="https://planetoidi.com" target="_blank">website.</a> 
     .marketing__image
       img(src="../images/11_ky.jpg" alt="Tuomas Louekari")
 
-block experimental
-  h2.h2 Experimental
-  p Here are some more experimental projects I've done over the years.
 block workstudies
   h2.h2 Professional timeline
   ul
