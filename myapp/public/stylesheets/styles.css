@@ -330,6 +330,10 @@ body {
 .code__copy {
   width: 40%; }
 
+.code__snippet {
+  width: 60%;
+  font-size: 0.6rem; }
+
 #design {
   height: 100vh;
   background-image: radial-gradient(#ddd 10%, transparent 10%);
@@ -358,17 +362,17 @@ body {
     border: solid transparent 0;
     background-clip: padding-box; }
   .grid--gutter-h, .grid--gutter {
-    margin-left: -10px;
-    margin-right: -10px; }
+    margin-left: -20px;
+    margin-right: -20px; }
     .grid--gutter-h > *, .grid--gutter > * {
-      border-left-width: 10px;
-      border-right-width: 10px; }
+      border-left-width: 20px;
+      border-right-width: 20px; }
   .grid--gutter-v, .grid--gutter {
-    margin-top: -10px;
-    margin-bottom: -10px; }
+    margin-top: -20px;
+    margin-bottom: -20px; }
     .grid--gutter-v > *, .grid--gutter > * {
-      border-top-width: 10px;
-      border-bottom-width: 10px; }
+      border-top-width: 20px;
+      border-bottom-width: 20px; }
 
 /* NAV */
 .navbar {
