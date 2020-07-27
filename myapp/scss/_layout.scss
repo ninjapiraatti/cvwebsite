@@ -130,36 +130,41 @@ body {
 	}
 }
 
+#code {
+	background-color: #151515;
+	color: #ccc;
+}
+
 .code {
 	&__copy {
-		width: 40%;
+		width: 35%;
 	}
 	&__snippet {
-		width: 60%;
-		font-size: 0.6rem;
+		width: 65%;
+		font-size: 0.75rem;
+		color: #585858;
 	}
 }
 
 #design {
-	height: 100vh;
 	background-image: radial-gradient(#ddd 10%, transparent 10%);
 	background-size: 15px 15px;
 }
 
 .design {
 	&__copy {
-		width: 40%;
+		width: 35%;
 	}
 	&__gallery {
-		width: 60%;
+		width: 65%;
 	}
 }
 
 .marketing {
 	&__copy {
-		width: 40%;
+		width: 35%;
 	}
 	&__image {
-		width: 60%;
+		width: 65%;
 	}
 }

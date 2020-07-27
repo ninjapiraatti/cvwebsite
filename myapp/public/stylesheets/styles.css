@@ -145,8 +145,8 @@ sub {
 
 .h2,
 .wysiwyg h2 {
-  font-size: 2.074rem;
-  line-height: 1.08486; }
+  font-size: 1.95rem;
+  line-height: 1.15385; }
 
 
 .h3,
@@ -327,29 +327,33 @@ body {
 .intro .bottomright {
   right: 10px; }
 
+#code {
+  background-color: #151515;
+  color: #ccc; }
+
 .code__copy {
-  width: 40%; }
+  width: 35%; }
 
 .code__snippet {
-  width: 60%;
-  font-size: 0.6rem; }
+  width: 65%;
+  font-size: 0.75rem;
+  color: #585858; }
 
 #design {
-  height: 100vh;
   background-image: radial-gradient(#ddd 10%, transparent 10%);
   background-size: 15px 15px; }
 
 .design__copy {
-  width: 40%; }
+  width: 35%; }
 
 .design__gallery {
-  width: 60%; }
+  width: 65%; }
 
 .marketing__copy {
-  width: 40%; }
+  width: 35%; }
 
 .marketing__image {
-  width: 60%; }
+  width: 65%; }
 
 /* GRID */
 .grid {
@@ -983,7 +987,11 @@ input[type="checkbox"] {
     width: calc(100% / 2);
     padding: 0.75rem; }
   .gallery__image {
-    display: block; }
+    transition: all 0.3s ease-in-out;
+    display: block;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); }
+    .gallery__image:hover {
+      box-shadow: 0px 10px 20px rgba(246, 0, 86, 0.5); }
 
 /* HELPERS */
 .screen-reader-text {
