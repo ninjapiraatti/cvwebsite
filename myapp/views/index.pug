@@ -50,7 +50,18 @@ block intro
         Syd Mead<br />
         Space Odyssey 2001
     .bottomright
-      p Lorem
+      a(href="https://github.com/ninjapiraatti" target="_blank")
+        svg(class="icon icon--github")
+          use(xlink:href="../../images/icons.svg#github")
+      a(href="https://wa.me/358443292033?text=Hei" target="_blank")
+        svg(class="icon icon--whatsapp")
+          use(xlink:href="../../images/icons.svg#whatsapp")
+      a(href="mailto:tuomas.louekari@planetoidi.com" target="_blank")
+        svg(class="icon icon--mail")
+          use(xlink:href="../../images/icons.svg#mail")
+      a(href="https://github.com/ninjapiraatti" target="_blank")
+        svg(class="icon icon--instagram")
+          use(xlink:href="../../images/icons.svg#instagram")
 block code
   .code.grid.grid--gutter
     .code__copy.wysiwyg
@@ -90,16 +101,16 @@ block design
       ul.gallery
         li.gallery__item
           a(href="../images/26_honey.jpg" data-lightbox="#lightbox" data-lightbox-slide="0")
-            img(class="gallery__image" src="../images/26_honey.jpg")
+            img(class="gallery__image honey" src="../images/26_honey.jpg")
         li.gallery__item
           a(href="../images/22_loop.jpg" data-lightbox="#lightbox" data-lightbox-slide="1")
-            img(class="gallery__image" src="../images/22_loop.jpg")
+            img(class="gallery__image loop" src="../images/22_loop.jpg")
         li.gallery__item
           a(href="../images/poster_hbp.jpg" data-lightbox="#lightbox" data-lightbox-slide="2")
-            img(class="gallery__image" src="../images/poster_hbp.jpg")
+            img(class="gallery__image hbp" src="../images/poster_hbp.jpg")
         li.gallery__item
           a(href="../images/27_hxgn.jpg" data-lightbox="#lightbox" data-lightbox-slide="3")
-            img(class="gallery__image" src="../images/27_hxgn.jpg")
+            img(class="gallery__image hxgn" src="../images/27_hxgn.jpg")
       #lightbox.lightbox
         ul.lightbox__content
           li.lightbox__image

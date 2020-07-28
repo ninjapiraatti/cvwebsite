@@ -18,9 +18,18 @@ $gallery-gutter: $spacing !default;
 		transition: all 0.3s ease-in-out;
 		display: block;
 		box-shadow: 0px 10px 20px rgba(0,0,0,0.3);
-		&:hover {
-			box-shadow: 0px 10px 20px transparentize($color: $color-link, $amount: .5);
-		}
+	}
+	.honey:hover {
+		box-shadow: 0px 10px 20px transparentize($color: $color-honey, $amount: .5);
+	}
+	.loop:hover {
+		box-shadow: 0px 10px 20px transparentize($color: $color-loop, $amount: .5);
+	}
+	.hbp:hover {
+		box-shadow: 0px 10px 20px transparentize($color: $color-hbp, $amount: .5);
+	}
+	.hxgn:hover {
+		box-shadow: 0px 10px 20px transparentize($color: $color-hxgn, $amount: .5);
 	}
 }
 
