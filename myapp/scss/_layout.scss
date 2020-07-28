@@ -84,8 +84,9 @@ body {
 	}
 }
 #intro {
+	position: relative;
 	@media (min-width: $breakpoint-sm) {
-		height: 100vh;
+		min-height: 100vh;
 	}
 }
 
