@@ -49,10 +49,13 @@ $color-hxgn: #00c8d8;
 
 /* Layout */
 
+$breakpoint-sm: 700px;
+$breakpoint-l: 1300px;
+$breakpoint-xl: 2500px;
 $spacing: $line-height * 1rem;
 
 $wrapper-width: 62.5rem;
-$wrapper-padding: 2.4vw;
+$wrapper-padding: 6vw;
 
 $navbar-height: $spacing * 2;
 $navbar-hamburger: 16px;

@@ -60,6 +60,12 @@ img {
 /* TYPOGRAPHY */
 html {
   font-size: 100%; }
+  @media (min-width: 1300px) {
+    html {
+      font-size: 150%; } }
+  @media (min-width: 2500px) {
+    html {
+      font-size: 250%; } }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -75,7 +81,7 @@ a,
   outline: none;
   color: #f60056;
   text-decoration: none;
-  transition: all 1s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
   a:hover, a:focus,
   .link:hover,
   .link:focus {
@@ -255,12 +261,16 @@ body {
       flex-grow: 1; }
 
 .site-header, .fat-footer, .site-footer, .section {
-  padding-left: 2.4vw;
-  padding-right: 2.4vw; }
-  @media (min-width: 65.5rem) {
+  padding-left: 6vw;
+  padding-right: 6vw; }
+  @media (min-width: 700px) {
     .site-header, .fat-footer, .site-footer, .section {
-      padding-left: calc(50vw - 31.25rem);
-      padding-right: calc(50vw - 31.25rem); } }
+      padding-left: 10vw;
+      padding-right: 10vw; } }
+  @media (min-width: 2500px) {
+    .site-header, .fat-footer, .site-footer, .section {
+      padding-left: 15vw;
+      padding-right: 15vw; } }
 
 .image-wrapper {
   position: relative;
@@ -287,22 +297,35 @@ body {
   margin-top: 0.75rem;
   padding-top: 0.75rem; }
 
-#intro {
-  height: 100vh; }
+@media (min-width: 700px) {
+  #intro {
+    height: 100vh; } }
 
 .intro__image {
-  width: 40%;
+  width: 100%;
   text-align: center; }
+  @media (min-width: 700px) {
+    .intro__image {
+      width: 40%; } }
   .intro__image img {
     border-radius: 50%;
     border: 0.1px solid #555;
-    padding: 2px; }
+    padding: 2px;
+    max-width: 50%; }
+    @media (min-width: 700px) {
+      .intro__image img {
+        max-width: 100%; } }
   .intro__image h1 {
     margin-bottom: 5px; }
 
 .intro__summary {
-  width: 60%;
-  padding-left: calc(50vw - 31.25rem); }
+  width: 100%; }
+  @media (min-width: 700px) {
+    .intro__summary {
+      width: 60%; } }
+  @media (max-width: 1300) {
+    .intro__summary {
+      padding-left: calc(50vw - 31.25rem); } }
   .intro__summary p {
     font-size: 0.8rem; }
   .intro__summary .h2, .intro__summary .wysiwyg h2, .wysiwyg .intro__summary h2 {
@@ -317,10 +340,13 @@ body {
 
 .intro .bottomleft,
 .intro .bottomright {
-  position: absolute;
-  bottom: 0px;
   font-size: 0.7rem;
   color: #ddd; }
+  @media (min-width: 700px) {
+    .intro .bottomleft,
+    .intro .bottomright {
+      position: absolute;
+      bottom: 0px; } }
 
 .intro .bottomleft {
   left: 10px; }
@@ -332,29 +358,44 @@ body {
   background-color: #151515;
   color: #ccc; }
 
-.code__copy {
-  width: 35%; }
+@media (min-width: 700px) {
+  .code__copy {
+    width: 35%; } }
 
 .code__snippet {
-  width: 65%;
+  display: none;
   font-size: 0.75rem;
   color: #585858; }
+  @media (min-width: 700px) {
+    .code__snippet {
+      width: 65%;
+      display: inline; } }
 
 #design {
   background-image: radial-gradient(#ddd 10%, transparent 10%);
   background-size: 15px 15px; }
 
 .design__copy {
-  width: 35%; }
+  order: 1; }
+  @media (min-width: 700px) {
+    .design__copy {
+      width: 35%;
+      order: 2; } }
 
 .design__gallery {
-  width: 65%; }
+  order: 2; }
+  @media (min-width: 700px) {
+    .design__gallery {
+      width: 65%;
+      order: 1; } }
 
-.marketing__copy {
-  width: 35%; }
+@media (min-width: 700px) {
+  .marketing__copy {
+    width: 35%; } }
 
-.marketing__image {
-  width: 65%; }
+@media (min-width: 700px) {
+  .marketing__image {
+    width: 65%; } }
 
 /* GRID */
 .grid {
@@ -515,7 +556,7 @@ html.no-js .site-header {
   display: inline-flex;
   align-items: center;
   height: 3rem;
-  max-width: calc(100% - 2.4vw - 16px);
+  max-width: calc(100% - 6vw - 16px);
   color: #444; }
   .site-logo__img, .site-logo object {
     height: 1.35rem;
@@ -532,12 +573,12 @@ Component specific section modifications should be in the component's .scss file
 .section--gallery @ _gallery.scss
 */
 .section {
-  padding-top: 2.4vw;
-  padding-bottom: 2.4vw;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
   overflow: hidden; }
   .section:not(:last-child) {
     border-bottom: solid 1px rgba(0, 0, 0, 0.05); }
-  @media (min-width: 65.5rem) {
+  @media (min-width: 70rem) {
     .section {
       padding-top: calc(50vw - 31.25rem);
       padding-bottom: calc(50vw - 31.25rem); } }

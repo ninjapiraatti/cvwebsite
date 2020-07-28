@@ -35,9 +35,13 @@ body {
 	padding-right: $wrapper-padding;
 
 	// This assumes $wrapper-padding is Xvw
-	@media (min-width: $wrapper-width * (1 + $wrapper-padding / 1vw / 50)) {
-		padding-left: calc(50vw - #{$wrapper-width / 2});
-		padding-right: calc(50vw - #{$wrapper-width / 2});
+	@media (min-width: $breakpoint-sm) {
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
+	@media (min-width: $breakpoint-xl) {
+		padding-left: 15vw;
+		padding-right: 15vw;
 	}
 }
 
@@ -80,25 +84,39 @@ body {
 	}
 }
 #intro {
-	height: 100vh;
+	@media (min-width: $breakpoint-sm) {
+		height: 100vh;
+	}
 }
 
 .intro {
 	&__image {
-		width: 40%;
+		width: 100%;
+		@media (min-width: $breakpoint-sm) {
+			width: 40%;
+		}
 		text-align: center;
 		img {
 			border-radius: 50%;
 			border: 0.1px solid #555;
 			padding: 2px;
+			max-width: 50%;
+			@media (min-width: $breakpoint-sm) {
+				max-width: 100%;
+			}
 		}
 		h1 {
 			margin-bottom: 5px;
 		}
 	}
 	&__summary {
-		width: 60%;
-		padding-left: calc(50vw - #{$wrapper-width / 2});
+		width: 100%;
+		@media (min-width: $breakpoint-sm) {
+			width: 60%;
+		}
+		@media (max-width: 1300) {
+			padding-left: calc(50vw - #{$wrapper-width / 2});
+		}
 		p {
 			font-size: 0.8rem;
 		}
@@ -117,8 +135,10 @@ body {
 	}
 	.bottomleft,
 	.bottomright {
-		position: absolute;
-		bottom: 0px;
+		@media (min-width: $breakpoint-sm) {
+			position: absolute;
+			bottom: 0px;
+		}
 		font-size: 0.7rem;
 		color: #ddd;
 	}
@@ -137,10 +157,16 @@ body {
 
 .code {
 	&__copy {
-		width: 35%;
+		@media (min-width: $breakpoint-sm) {
+			width: 35%;
+		}
 	}
 	&__snippet {
-		width: 65%;
+		display: none;
+		@media (min-width: $breakpoint-sm) {
+			width: 65%;
+			display: inline;
+		}
 		font-size: 0.75rem;
 		color: #585858;
 	}
@@ -153,18 +179,30 @@ body {
 
 .design {
 	&__copy {
-		width: 35%;
+		order: 1;
+		@media (min-width: $breakpoint-sm) {
+			width: 35%;
+			order: 2;
+		}
 	}
 	&__gallery {
-		width: 65%;
+		order: 2;
+		@media (min-width: $breakpoint-sm) {
+			width: 65%;
+			order: 1;
+		}
 	}
 }
 
 .marketing {
 	&__copy {
-		width: 35%;
+		@media (min-width: $breakpoint-sm) {
+			width: 35%;
+		}
 	}
 	&__image {
-		width: 65%;
+		@media (min-width: $breakpoint-sm) {
+			width: 65%;
+		}
 	}
 }
