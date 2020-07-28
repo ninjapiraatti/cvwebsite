@@ -135,7 +135,12 @@ body {
 	}
 	.bottomleft,
 	.bottomright {
+		width: 100%;
+		text-align: center;
+		position: relative;
 		@media (min-width: $breakpoint-sm) {
+			width: auto;
+			text-align: left;
 			position: absolute;
 			bottom: 0px;
 		}
@@ -143,6 +148,10 @@ body {
 		color: #ddd;
 	}
 	.bottomleft {
+		display: none;
+		@media (min-width: $breakpoint-sm) {
+			display: inline;
+		}
 		left: 10px;
 	}
 	.bottomright {

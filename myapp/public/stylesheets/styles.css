@@ -65,7 +65,7 @@ html {
       font-size: 150%; } }
   @media (min-width: 2500px) {
     html {
-      font-size: 250%; } }
+      font-size: 180%; } }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -340,16 +340,25 @@ body {
 
 .intro .bottomleft,
 .intro .bottomright {
+  width: 100%;
+  text-align: center;
+  position: relative;
   font-size: 0.7rem;
   color: #ddd; }
   @media (min-width: 700px) {
     .intro .bottomleft,
     .intro .bottomright {
+      width: auto;
+      text-align: left;
       position: absolute;
       bottom: 0px; } }
 
 .intro .bottomleft {
+  display: none;
   left: 10px; }
+  @media (min-width: 700px) {
+    .intro .bottomleft {
+      display: inline; } }
 
 .intro .bottomright {
   right: 10px; }
