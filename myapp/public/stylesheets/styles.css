@@ -325,6 +325,10 @@ body {
   @media (min-width: 700px) {
     .intro__summary {
       width: 60%; } }
+  @media (min-width: 1300px) {
+    .intro__summary {
+      align-self: center;
+      margin-top: -5%; } }
   @media (max-width: 1300) {
     .intro__summary {
       padding-left: calc(50vw - 31.25rem); } }
@@ -357,13 +361,14 @@ body {
 
 .intro .bottomleft {
   display: none;
-  left: 10px; }
+  left: 0px; }
   @media (min-width: 700px) {
     .intro .bottomleft {
       display: inline; } }
 
 .intro .bottomright {
-  right: 10px; }
+  right: 0px;
+  bottom: 5px; }
 
 #code {
   background-color: #151515;
