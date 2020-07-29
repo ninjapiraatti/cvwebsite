@@ -215,7 +215,9 @@ blockquote {
 
 .wysiwyg figcaption {
   font-size: 0.9rem;
-  font-style: italic; }
+  font-style: italic;
+  text-align: center;
+  margin-top: 5px; }
 
 .wysiwyg .align_left,
 .wysiwyg .align_right,
@@ -301,6 +303,9 @@ body {
   position: relative; }
   @media (min-width: 700px) {
     #intro {
+      min-height: calc(100vh - 48px); } }
+  @media (min-width: 1300px) {
+    #intro {
       min-height: calc(100vh - 72px); } }
 
 .intro__image {
@@ -324,7 +329,8 @@ body {
   width: 100%; }
   @media (min-width: 700px) {
     .intro__summary {
-      width: 60%; } }
+      width: 60%;
+      padding-left: calc(10vw - 48px); } }
   @media (min-width: 1300px) {
     .intro__summary {
       align-self: center;
@@ -336,10 +342,14 @@ body {
     font-size: 0.8rem; }
   .intro__summary .h2, .intro__summary .wysiwyg h2, .wysiwyg .intro__summary h2 {
     margin-top: 12px;
-    margin-bottom: 16px; }
+    margin-bottom: 20px; }
   .intro__summary .h3, .intro__summary .wysiwyg h3, .wysiwyg .intro__summary h3 {
     font-size: 1rem;
     margin-bottom: 4px; }
+    @media (min-width: 1300px) {
+      .intro__summary .h3, .intro__summary .wysiwyg h3, .wysiwyg .intro__summary h3 {
+        margin-bottom: 8px;
+        margin-top: 20px; } }
   .intro__summary .skill {
     margin-bottom: 12px;
     border-bottom: 1px dotted #ddd; }

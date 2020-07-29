@@ -86,6 +86,9 @@ body {
 #intro {
 	position: relative;
 	@media (min-width: $breakpoint-sm) {
+		min-height: calc(100vh - 48px);
+	}
+	@media (min-width: $breakpoint-l) {
 		min-height: calc(100vh - 72px);
 	}
 }
@@ -114,6 +117,7 @@ body {
 		width: 100%;
 		@media (min-width: $breakpoint-sm) {
 			width: 60%;
+			padding-left: calc(10vw - 48px);
 		}
 		@media (min-width: $breakpoint-l) {
 			align-self: center;
@@ -127,11 +131,15 @@ body {
 		}
 		.h2 {
 			margin-top: 12px;
-			margin-bottom: 16px;
+			margin-bottom: 20px;
 		}
 		.h3 {
 			font-size: 1rem;
 			margin-bottom: 4px;
+			@media (min-width: $breakpoint-l) {
+				margin-bottom: 8px;
+				margin-top: 20px;
+			}
 		}
 		.skill {
 			margin-bottom: 12px;
